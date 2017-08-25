@@ -5,7 +5,6 @@
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-           <link rel="stylesheet" type="text/css" href="style.css">
            <style>  
            ul{  
                 background-color:#eee;  
@@ -14,6 +13,12 @@
            li{  
                 padding:12px;  
            }  
+           body  {
+    background-image: url("rail.jpg");
+    background-color: #cccccc;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
            </style>  
       </head>  
       <body>  
@@ -66,9 +71,9 @@
            if(query != '')  
            {  
                 $.ajax({  
-                     url:"search.php",  
+                     url:"search_source.php",  
                      method:"POST",  
-                     data:{query:query},  
+                     data:{query1:query},  
                      success:function(data)  
                      {  
                           $('#SourceList').fadeIn();  
@@ -93,7 +98,7 @@
            if(query != '')  
            {  
                 $.ajax({  
-                     url:"search.php",  
+                     url:"search_destination.php",  
                      method:"POST",  
                      data:{query:query},  
                      success:function(data)  
